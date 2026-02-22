@@ -13,7 +13,7 @@ while True:
     user = input("Rock, Paper ya Scissors choose karein: ").lower()
 
     if user not in choices:
-        print("❌ Galat choice! Dobara try karein.")
+        print(" Galat choice! Dobara try karein.")
         rounds -= 1
         continue
 
@@ -23,16 +23,16 @@ while True:
     print("Computer choice:", computer)
 
     if user == computer:
-        print("🤝 Tie!")
+        print(" Tie!")
     elif (
         (user == "rock" and computer == "scissors") or
         (user == "paper" and computer == "rock") or
         (user == "scissors" and computer == "paper")
     ):
-        print("🎉 User wins this round!")
+        print("User wins this round!")
         user_score += 1
     else:
-        print("💻 Computer wins this round!")
+        print(" Computer wins this round!")
         computer_score += 1
 
     play_again = input("\nDobara game khelni hai? (yes/no): ").lower()
@@ -54,5 +54,5 @@ with open("score.txt", "a") as file:
     file.write(f"Computer Wins: {computer_score}\n")
     file.write("------------------------\n")
 
-print("\n📁 Score file me save ho gaya (score.txt)")
+print("\n Score file me save ho gaya (score.txt)")
 
